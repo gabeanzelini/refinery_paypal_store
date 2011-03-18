@@ -1,0 +1,14 @@
+<% content_for :body_content_title, @product.name %>
+<% content_for :body_content_left do %>
+  <article class="product">
+    <p>
+      <small><%= t('.product_date') %> <%= l(@product.product_date, :format => :long) %></small>
+    </p>
+    <p>
+      <%= link_to t('.back_to_index'), products_url %>
+    </p>
+  </article>
+<% end %>
+<% content_for :body_content_right, render(:partial => 'recent_posts') %>
+
+<%= render :partial => "/shared/content_page" %>

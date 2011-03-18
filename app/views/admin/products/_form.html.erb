@@ -1,0 +1,36 @@
+<%= form_for [:admin, @product] do |f| %>
+  <%= render :partial => "/shared/admin/error_messages",
+             :locals => {
+               :object => @product,
+               :include_object_name => true
+             } %>
+
+  <div class='field'>
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "larger widest" %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :price %>
+    <%= f.text_field :price, :class => "larger widest" %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image %>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {:f => f, :field => :image_id, :image => @product.image } %>
+  </div>
+
+  <%= render :partial => "/shared/admin/form_actions",
+             :locals => {
+               :f => f,
+               :continue_editing => true,
+               :delete_title => t('admin.products.product.delete'),
+               :delete_confirmation => t('shared.admin.delete.message', :title => @product.name)
+             } %>
+
+<% end %>

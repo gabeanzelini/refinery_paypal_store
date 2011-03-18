@@ -1,0 +1,26 @@
+<% content_for :body_content_title do %>
+  <%= t('plugins.refinery_ebay_store.title') %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <%= @page[:body] if @products.offset == 0 %>
+
+  <% if @products.any? %>
+    <% @products.each do |item| %>
+      <article class="product_truncated">
+      <%= image_tag item.image.thumbnail('175x175').url %>
+        <h3><%= item.name %></h3>
+        <p>
+        <%= item.price %>
+        <small><%= item.description %></small>
+        </p>
+      </article>
+    <% end %>
+
+    <%= will_paginate(@products) %>
+  <% else %>
+    <p><em><%= t('.no_items_yet') %></em></p>
+  <% end %>
+<% end -%>
+
+<%= render :partial => "/shared/content_page" %>
