@@ -2,7 +2,8 @@
 <% content_for :body_content_left do %>
   <article class="product">
     <p>
-      <small><%= t('.product_date') %> <%= l(@product.product_date, :format => :long) %></small>
+    <%= @product.price %>
+    <%= @product.description %> 
     </p>
     <p>
       <%= link_to t('.back_to_index'), products_url %>

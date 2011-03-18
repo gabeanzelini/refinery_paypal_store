@@ -1,9 +1,7 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>'>
   <span class='title'>
     <%= product.name %>
-    <span class="preview">
-      <%= t('.product_date') %> <%= l(product.product_date, :format => :short) %>
-    </span>
+    <%= product.price %>
   </span>
   <span class='actions'>
     <%= link_to refinery_icon_tag('application_go.png'), product_url(product),

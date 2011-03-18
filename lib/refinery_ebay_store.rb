@@ -1,8 +1,8 @@
 require 'refinery'
-require File.expand_path('../products', __FILE__)
+require File.expand_path('../store', __FILE__)
 
 module Refinery
-  module products
+  module Products
 
     class Engine < Rails::Engine
       config.after_initialize do
@@ -11,7 +11,7 @@ module Refinery
           plugin.menu_match = /(admin|refinery)\/products?$/
           plugin.url = {:controller => 'admin/products', :action => 'index'}
           plugin.activity = {
-            :class => product,
+            :class => Product,
             :title => 'name',
             :url_prefix => 'edit'
           }

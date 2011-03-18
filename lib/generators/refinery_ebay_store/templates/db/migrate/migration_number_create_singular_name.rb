@@ -10,7 +10,7 @@ class Create<%= table_name.camelize %> < ActiveRecord::Migration
 
     add_index :<%= table_name %>, :id
 
-    load(Rails.root.join('db', 'seeds', 'refinery_ebay_store').to_s)
+    load(Rails.root.join('db', 'seeds', 'refinery_ebay_store.rb').to_s)
   end
 
   def self.down
