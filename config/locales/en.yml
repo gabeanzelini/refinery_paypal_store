@@ -1,0 +1,36 @@
+en:
+  plugins:
+    refinery_ebay_store:
+      title: Store
+      description: A little store front using ebay shopping cart.
+  admin:
+    products:
+      product:
+        view_live_html: "View this product live <br/><em>(opens in a new window)</em>"
+        edit: "Edit this product"
+        delete: "Remove this product forever"
+      index:
+        actions: Actions
+        create: "Add product"
+        product: products
+        no_items: "Sorry, no results found."
+        no_items_yet: 'There are no products yet. Click "Add products" to add your first product.'
+  products:
+    show:
+      back_to_index: "Back to all products"
+    index:
+      read_more: Read more
+      no_items_yet: There are no products yet.
+  activerecord:
+    attributes:
+      product:
+        title: Name
+        image: &image Image
+        description: Description
+        price: Price
+    models:
+      product: product
+  shared:
+    admin:
+      image_picker:
+        image: *image
