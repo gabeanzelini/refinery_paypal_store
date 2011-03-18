@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
     'lib/generators/refinery_ebay_store/templates/db/seeds/seed.rb',
     'lib/generators/refinery_ebay_store_generator.rb',
     'lib/products.rb',
-    'lib/refinerycms-cradle-roll.rb',
+    'lib/refinery_ebay_store.rb',
     'license.md',
     'readme.md'
   ]
