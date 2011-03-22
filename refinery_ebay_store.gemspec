@@ -28,9 +28,7 @@ Gem::Specification.new do |s|
     'app/views/admin/products/index.html.erb',
     'app/views/admin/products/new.html.erb',
     'app/views/products',
-    'app/views/products/_recent_products.html.erb',
     'app/views/products/index.html.erb',
-    'app/views/products/index.rss.builder',
     'app/views/products/show.html.erb',
     'config',
     'config/locales',
@@ -47,9 +45,8 @@ Gem::Specification.new do |s|
     'lib/generators/refinery_ebay_store/templates/db/seeds',
     'lib/generators/refinery_ebay_store/templates/db/seeds/seed.rb',
     'lib/generators/refinery_ebay_store_generator.rb',
-    'lib/products.rb',
+    'lib/store.rb',
     'lib/refinery_ebay_store.rb',
-    'license.md',
     'readme.md'
   ]
   s.test_files        = [
