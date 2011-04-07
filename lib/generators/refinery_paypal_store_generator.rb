@@ -1,15 +1,15 @@
 require 'rails/generators/migration'
 
-class RefineryEbayStoreGenerator < Rails::Generators::NamedBase
+class RefineryPaypalStoreGenerator < Rails::Generators::NamedBase
   include Rails::Generators::Migration
 
-  source_root File.expand_path('../refinery_ebay_store/templates/', __FILE__)
+  source_root File.expand_path('../refinery_paypal_store/templates/', __FILE__)
   argument :name, :type => :string, :default => 'product', :banner => ''
   argument :attributes, :type => :array, :default => ["name:string", "description:text", "price:decimal", "image_id:integer"]
 
   def generate
     # seed file
-    template 'db/seeds/seed.rb', Rails.root.join('db/seeds/refinery_ebay_store.rb')
+    template 'db/seeds/seed.rb', Rails.root.join('db/seeds/refinery_paypal_store.rb')
 
     next_migration_number = ActiveRecord::Generators::Base.next_migration_number(File.dirname(__FILE__))
     template('db/migrate/migration_number_create_singular_name.rb',

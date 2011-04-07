@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
-  s.name              = %q{refinery_ebay_store}
+  s.name              = %q{refinery_paypal_store}
   s.version           = %q{1.0}
-  s.description       = %q{A little store front using ebay shopping cart.}
+  s.description       = %q{A little store front using paypal shopping cart.}
   s.date              = %q{2011-03-01}
-  s.summary           = %q{A little store front using ebay shopping cart.}
+  s.summary           = %q{A little store front using paypal shopping cart.}
   s.email             = %q{me@gabeanzelini.com}
   s.homepage          = %q{http://gabeanzelini.com}
   s.authors           = %w(Gabe Anzelini)
@@ -37,16 +37,16 @@ Gem::Specification.new do |s|
     'lib',
     'lib/gemspec.rb',
     'lib/generators',
-    'lib/generators/refinery_ebay_store',
-    'lib/generators/refinery_ebay_store/templates',
-    'lib/generators/refinery_ebay_store/templates/db',
-    'lib/generators/refinery_ebay_store/templates/db/migrate',
-    'lib/generators/refinery_ebay_store/templates/db/migrate/migration_number_create_singular_name.rb',
-    'lib/generators/refinery_ebay_store/templates/db/seeds',
-    'lib/generators/refinery_ebay_store/templates/db/seeds/seed.rb',
-    'lib/generators/refinery_ebay_store_generator.rb',
+    'lib/generators/refinery_paypal_store',
+    'lib/generators/refinery_paypal_store/templates',
+    'lib/generators/refinery_paypal_store/templates/db',
+    'lib/generators/refinery_paypal_store/templates/db/migrate',
+    'lib/generators/refinery_paypal_store/templates/db/migrate/migration_number_create_singular_name.rb',
+    'lib/generators/refinery_paypal_store/templates/db/seeds',
+    'lib/generators/refinery_paypal_store/templates/db/seeds/seed.rb',
+    'lib/generators/refinery_paypal_store_generator.rb',
     'lib/store.rb',
-    'lib/refinery_ebay_store.rb',
+    'lib/refinery_paypal_store.rb',
     'readme.md'
   ]
   s.test_files        = [

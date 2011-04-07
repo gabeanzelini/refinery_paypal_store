@@ -7,7 +7,7 @@ module Refinery
     class Engine < Rails::Engine
       config.after_initialize do
         Refinery::Plugin.register do |plugin|
-          plugin.name = "refinery_ebay_store"
+          plugin.name = "refinery_paypal_store"
           plugin.menu_match = /(admin|refinery)\/products?$/
           plugin.url = {:controller => 'admin/products', :action => 'index'}
           plugin.activity = {

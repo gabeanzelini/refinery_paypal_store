@@ -10,11 +10,11 @@ class Create<%= table_name.camelize %> < ActiveRecord::Migration
 
     add_index :<%= table_name %>, :id
 
-    load(Rails.root.join('db', 'seeds', 'refinery_ebay_store.rb').to_s)
+    load(Rails.root.join('db', 'seeds', 'refinery_paypal_store.rb').to_s)
   end
 
   def self.down
-    UserPlugin.destroy_all({:name => "refinery_ebay_store"})
+    UserPlugin.destroy_all({:name => "refinery_paypal_store"})
 
     Page.delete_all({:link_url => "/products"})
 

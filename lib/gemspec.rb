@@ -8,11 +8,11 @@ end
 
 gemspec = <<EOF
 Gem::Specification.new do |s|
-  s.name              = %q{refinery_ebay_store}
+  s.name              = %q{refinery_paypal_store}
   s.version           = %q{#{version}}
-  s.description       = %q{A little store front using ebay shopping cart.}
+  s.description       = %q{A little store front using paypal shopping cart.}
   s.date              = %q{#{Time.now.strftime('%Y-%m-%d')}}
-  s.summary           = %q{A little store front using ebay shopping cart.}
+  s.summary           = %q{A little store front using paypal shopping cart.}
   s.email             = %q{me@gabeanzelini.com}
   s.homepage          = %q{http://gabeanzelini.com}
   s.authors           = %w(Gabe Anzelini)
@@ -29,4 +29,4 @@ Gem::Specification.new do |s|
 end
 EOF
 
-File.open(File.expand_path("../../refinery_ebay_store.gemspec", __FILE__), 'w').puts(gemspec)
+File.open(File.expand_path("../../refinery_paypal_store.gemspec", __FILE__), 'w').puts(gemspec)

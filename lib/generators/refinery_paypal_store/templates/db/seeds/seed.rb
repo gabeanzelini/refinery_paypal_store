@@ -1,5 +1,5 @@
 User.find(:all).each do |user|
-  user.plugins.create(:name => "refinery_ebay_store",
+  user.plugins.create(:name => "refinery_paypal_store",
                       :position => (user.plugins.maximum(:position) || -1) +1)
 end
 

@@ -1,8 +1,8 @@
 en:
   plugins:
-    refinery_ebay_store:
+    refinery_paypal_store:
       title: Store
-      description: A little store front using ebay shopping cart.
+      description: A little store front using paypal shopping cart.
   admin:
     products:
       product:
