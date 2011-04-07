@@ -8,7 +8,7 @@
   <% if @products.any? %>
     <% @products.each do |item| %>
       <article class="product_truncated">
-      <%= image_tag item.image.thumbnail('175x175').url %>
+      <%= image_tag(item.image.thumbnail('175x175').url) if item.image%>
         <h3><%= item.name %></h3>
         <p>
         <%= item.price %>
