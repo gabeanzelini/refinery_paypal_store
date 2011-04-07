@@ -5,7 +5,7 @@ class RefineryPaypalStoreGenerator < Rails::Generators::NamedBase
 
   source_root File.expand_path('../refinery_paypal_store/templates/', __FILE__)
   argument :name, :type => :string, :default => 'product', :banner => ''
-  argument :attributes, :type => :array, :default => ["name:string", "description:text", "price:decimal", "image_id:integer"]
+  argument :attributes, :type => :array, :default => ["name:string", "description:text", "price:decimal", "image_id:integer", "paypal_button:text"]
 
   def generate
     # seed file

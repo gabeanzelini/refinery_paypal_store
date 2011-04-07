@@ -4,6 +4,7 @@
     <p>
     <%= @product.price %>
     <%= @product.description %> 
+    <%= @product.paypal_button.html_safe %>
     </p>
     <p>
       <%= link_to t('.back_to_index'), products_url %>

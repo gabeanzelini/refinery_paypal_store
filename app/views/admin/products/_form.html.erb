@@ -21,6 +21,11 @@
   </div>
 
   <div class='field'>
+    <%= f.label :paypal_button %>
+    <%= f.text_area :paypal_button %>
+  </div>
+
+  <div class='field'>
     <%= f.label :image %>
     <%= render :partial => "/shared/admin/image_picker", :locals => {:f => f, :field => :image_id, :image => @product.image } %>
   </div>
