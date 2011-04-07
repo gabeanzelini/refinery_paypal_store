@@ -13,7 +13,7 @@
         <p>
         <%= item.price %>
         <small><%= item.description %></small>
-        <%= @product.paypal_button.html_safe %>
+        <%= item.paypal_button.html_safe %>
         </p>
       </article>
     <% end %>
