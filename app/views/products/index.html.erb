@@ -11,7 +11,7 @@
       <%= image_tag(item.image.thumbnail('175x175').url) if item.image%>
         <h3><%= item.name %></h3>
         <p>
-        <%= item.price %>
+        $<%= "%.2f" % item.price %>
         <small><%= item.description %></small>
         <%= raw item.paypal_button %>
         </p>
