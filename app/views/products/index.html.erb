@@ -15,7 +15,7 @@
         </div>
         <div class="details">
           <h3><%= item.name %></h3>
-          <span class="price"><%= "%.2f" % item.price %></span>
+          <span class="price"><%= "$%.2f" % item.price %></span>
           <p><%= item.description %></p>
           <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_s-xclick">
