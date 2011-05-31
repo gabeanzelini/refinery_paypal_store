@@ -2,7 +2,7 @@
 <% content_for :body_content_left do %>
   <article class="product">
     <p>
-    <%= @product.price %>
+    <%= "%.2f" % @product.price %>
     <%= @product.description %> 
     <%= @product.paypal_button.html_safe %>
     </p>
