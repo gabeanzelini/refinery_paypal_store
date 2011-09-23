@@ -29,3 +29,12 @@
 <% end -%>
 
 <%= render :partial => "/shared/content_page" %>
+
+<% content_For :jq_ready do %>
+  $(function(){
+    $('form[target=paypal]').submit(function(){
+      alert("Please fill in the room number at the end of checking out.")
+      return true
+    })
+  })
+<% end %>
