@@ -17,7 +17,7 @@
           <h3><%= item.name %></h3>
           <span class="price"><%= "$%.2f" % item.price %></span>
           <p><%= item.description %></p>
-          <p><%= item.paypal_button.safe_html %>
+          <p><%=raw item.paypal_button %>
         </div>
       </article>
     <% end %>
