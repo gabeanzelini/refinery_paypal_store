@@ -30,11 +30,11 @@
 
 <%= render :partial => "/shared/content_page" %>
 
-<% content_for :jq_ready do %>
+<script type="text/javascript"> 
   $(function(){
     $('form[target=paypal]').submit(function(){
       alert("Please fill in the room number at the end of checking out.")
       return true
     })
   })
-<% end %>
+</script>
