@@ -5,7 +5,7 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <%= @page[:body] if @products.offset == 0 %>
+  <%= @page[:body] %>
 
   <% if @products.any? %>
     <% @products.each do |item| %>
