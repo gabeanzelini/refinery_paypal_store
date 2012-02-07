@@ -5,27 +5,32 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <%= @page[:body] %>
+  <div class="body">
+    <%= @page[:body] %>
+  </div>
 
-  <% if @products.any? %>
-    <% @products.each do |item| %>
-      <article class="product_truncated clearfix">
-        <div class="img">
-          <%= image_tag(item.image.thumbnail('175x175').url) if item.image%>
-        </div>
-        <div class="details">
-          <h3><%= item.name %></h3>
-          <span class="price"><%= "$%.2f" % item.price %></span>
-          <p><%= item.description %></p>
-          <p><%=raw item.paypal_button %>
-        </div>
-      </article>
+  <div class="products">
+
+    <% if @products.any? %>
+      <% @products.each do |item| %>
+        <article class="product_truncated clearfix">
+          <div class="img">
+            <%= image_tag(item.image.thumbnail('175x175').url) if item.image%>
+          </div>
+          <div class="details">
+            <h3><%= item.name %></h3>
+            <span class="price"><%= "$%.2f" % item.price %></span>
+            <p><%= item.description %></p>
+            <p><%=raw item.paypal_button %>
+          </div>
+        </article>
+      <% end %>
+
+      <%= will_paginate(@products) %>
+    <% else %>
+      <p><em><%= t('.no_items_yet') %></em></p>
     <% end %>
-
-    <%= will_paginate(@products) %>
-  <% else %>
-    <p><em><%= t('.no_items_yet') %></em></p>
-  <% end %>
+  </div>
 <% end -%>
 
 <%= render :partial => "/shared/content_page" %>
